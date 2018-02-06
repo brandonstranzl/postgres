@@ -18,7 +18,15 @@ client.connect((err) => {
     if (err) {
       return console.error("error running query", err);
     }
-    console.log(result.rows[0].number); //output: 1
+    console.log(result); //output: 1
     client.end();
   });
 });
+
+client.query(famous_people, process.argv[2], (err, res) => {
+  if (err) {
+    console.log(err.stack)
+  } else {
+    console.log(result)
+  }
+})
