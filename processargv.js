@@ -15,10 +15,10 @@ client.connect((err) => {
     return console.error("Connection Error", err);
   }
 
-  // client.query('SELECT * FROM famous_people;', (err, result) => {
-//     if (err) throw err;
-//     console.log(result.rows);
-// })
+  client.query('SELECT * FROM famous_people;', (err, result) => {
+    if (err) throw err;
+    console.log(result.rows);
+})
 
 
 // check if argv[2] exists if not raise error
